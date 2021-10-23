@@ -1,0 +1,141 @@
+/* Styles for my portal in it261 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+body {
+    background-color: rgb(243, 239, 217);
+}
+
+header {
+    overflow:hidden;
+    background-color: rgb(236, 232, 204);
+}
+
+h1 {
+    font-family: lucida console, monospace;
+    font-size: 26px;
+}
+
+nav {
+    float: right;
+    height: 50px;
+    margin: 20px auto;
+}
+
+nav ul {
+    float: right;
+    padding: 10px;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+    background-color: rgb(250, 247, 231);
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(158, 146, 88);
+    font-family: lucida console, monospace;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+#me {
+    width: 350px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+}
+
+#wrapper {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+#hero {
+    background: rgb(250, 247, 231);
+    margin-bottom: 20px;
+    color:rgb(49, 48, 41);
+}
+
+main {
+    width: 60%;
+    height: 1200px;
+    background-color: rgb(250, 247, 231);
+    float: left;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+aside {
+    width: 38%;
+    height: 1200px;
+    background-color: rgb(250, 247, 231);
+    float: right;
+    border-radius: 14px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+aside ul {
+    padding: 10px;
+    list-style-type: square;
+    color: rgb(75, 72, 56);
+}
+
+aside li {
+    margin-left: 25px;
+    padding: 3px;
+}
+
+main h1, h2, h3, p, a {
+    color: rgb(75, 72, 56);
+}
+
+
+aside h1, h2, h3, p, a {
+    color: rgb(75, 72, 56);
+}
+
+.screenshots {
+    width: 600px;
+}
+
+footer ul {
+    float: right;
+}
+
+footer {
+    height: 50px;
+    border-top: 1px dotted #333;
+    line-height: 50px;
+    clear: both;
+}
+
+footer li {
+    float:left;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+footer a {
+    color:rgb(49, 48, 41);
+}
