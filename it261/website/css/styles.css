@@ -84,9 +84,9 @@ aside a {
     margin-top: 5px;
 }
 
-hr {
-    border-top: 1px dashed black;
-    width: 300px;
+aside ul li {
+    border: 0.5px;
+    border-style: hidden hidden dashed hidden;
 }
 
 footer ul {

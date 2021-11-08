@@ -77,7 +77,6 @@ nav a {
 
 main {
     width: 60%;
-    height: 1200px;
     background-color: rgb(250, 247, 231);
     float: left;
     margin-bottom: 20px;
@@ -87,12 +86,12 @@ main {
 
 aside {
     width: 38%;
-    height: 1200px;
     background-color: rgb(250, 247, 231);
     float: right;
     border-radius: 14px;
     padding: 20px;
     margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 aside ul {
