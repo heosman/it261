@@ -25,37 +25,43 @@ return $my_return;
 
 switch(THIS_PAGE) {
     case 'index.php':
-        $title = 'Home page of my IT 261 website';
+        $title = 'Home page';
         $body = 'home';
         $headline = "Welcome to my IT 261 website!";
     break;
 
     case 'about.php':
-        $title = 'About page of my IT 261 website';
+        $title = 'About page';
         $body = 'about inner';
         $headline = "Welcome to my About page!";
     break;
 
     case 'daily.php':
-        $title = 'Daily page of my IT 261 website';
+        $title = 'Daily page';
         $body = 'daily inner';
         $headline = "Welcome to my Daily page!";
     break;
 
     case 'projects.php':
-        $title = 'Projects page of my IT 261 website';
+        $title = 'Projects page';
         $body = 'projects inner';
         $headline = "Welcome to my Projects page!";
     break;
 
     case 'contact.php':
-        $title = 'Contact page of my IT 261 website';
+        $title = 'Contact page';
         $body = 'contact inner';
         $headline = "Welcome to my Contact page!";
     break;
 
+    case 'thx.php':
+        $title = 'Thanks!';
+        $body = 'contact inner';
+        $headline = "Your form was submitted. Thank you for filling out of our form!";
+    break;
+
     case 'gallery.php':
-        $title = 'Gallery page of my IT 261 website';
+        $title = 'Gallery page';
         $body = 'gallery inner';
         $headline = "Welcome to my Gallery page!";
     break;
@@ -197,3 +203,146 @@ switch($today) {
     }
 
 // emailable form php
+
+$first_name = '';
+$last_name = '';
+$email = '';
+$desserts = '';
+$drink = '';
+$comments = '';
+$privacy = '';
+$phone = '';
+
+$first_name_Err = '';
+$last_name_Err = '';
+$email_Err = '';
+$desserts_Err = '';
+$drink_Err = '';
+$comments_Err = '';
+$privacy_Err = '';
+$phone_Err = '';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+if (empty($_POST['first_name'])) {
+    $first_name_Err = 'Please fill out your first name!';  
+} else {
+    $first_name = $_POST['first_name'];
+}
+
+if (empty($_POST['last_name'])) {
+    $last_name_Err = 'Please fill out your last name!';  
+} else {
+    $last_name = $_POST['last_name'];
+}
+
+if (empty($_POST['email'])) {
+    $email_Err = 'Please fill out your email!'; 
+    unset($_POST['email']); 
+} else {
+    $email = $_POST['email'];
+}
+
+if (empty($_POST['desserts'])) {
+    $desserts_Err = 'Please choose your desserts!';  
+} else {
+    $desserts = $_POST['desserts'];
+}
+
+if ($_POST['drink'] == NULL) {
+    $drink_Err = 'Please select your drink!';  
+} else {
+    $drink = $_POST['drink'];
+}
+
+if (empty($_POST['comments'])) {
+    $comments_Err = 'Please share your comments with us!';  
+} else {
+    $comments = $_POST['comments'];
+}
+
+if (empty($_POST['privacy'])) {
+    $privacy_Err = 'You MUST agree!';  
+} else {
+    $privacy = $_POST['privacy'];
+}
+
+if(empty($_POST['phone'])) { 
+    $phone_Err = 'Your phone number please!';
+    unset($_POST['phone']);
+} elseif(array_key_exists('phone', $_POST)) {
+    if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])) { 
+        $phone_Err = 'Invalid format!';
+        unset($_POST['phone']);
+} else {
+     $phone = $_POST['phone'];
+    }
+}
+
+
+function my_desserts() {
+    $my_return = '';
+    if (!empty($_POST['desserts'])) {
+        $my_return = implode(', ', $_POST['desserts'] );
+    }
+    return $my_return;
+} // closes function
+
+
+if(isset(
+    $_POST['first_name'],
+    $_POST['last_name'],
+    $_POST['email'],
+    $_POST['desserts'],
+    $_POST['drink'],
+    $_POST['comments'],
+    $_POST['privacy'],
+    $_POST['phone']
+)) {
+
+$to = 'szemeo@mystudentswa.com';
+$subject = 'Test Email,' .date('m/d/y') ;
+$body = '
+First name: '.$first_name.' '.PHP_EOL.'
+Last name: '.$last_name.' '.PHP_EOL.'
+Email: '.$email.' '.PHP_EOL.'
+Phone number: '.$phone.' '.PHP_EOL.'
+Drink: '.$drink.' '.PHP_EOL.'
+Desserts: '.my_desserts().' '.PHP_EOL.'
+Comments: '.$comments.' '.PHP_EOL.'
+';
+
+$headers = array(
+'from' => 'noreply@hananeo.com',
+'Reply-to' => ''.$email.'',
+);
+
+mail($to, $subject, $body, $headers);
+header('Location: thx.php');
+
+}
+
+}
+
+
+// random images
+
+$photos = array(
+    'pic1',
+    'pic2',
+    'pic3',
+    'pic4',
+    'pic5',
+);
+
+$photos[0] = 'pic1';
+$photos[1] = 'pic2';
+$photos[2] = 'pic3';
+$photos[3] = 'pic4';
+$photos[4] = 'pic5';
+
+function random_pics($photos) {
+    $i = rand(0,4);
+    $selected_image = ''.$photos[$i].'.jpg';
+    echo '<img src="images/'.$selected_image.'" alt="'.$photos[$i].'" class="random-image">';
+}

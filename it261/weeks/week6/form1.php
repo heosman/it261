@@ -102,7 +102,7 @@ if(isset(
     $_POST['phone']
 )) {
 
-$to = 'hanan.osman@seattlecolleges.edu';
+$to = 'hanaaneooo@gmail.com';
 $subject = 'Test Email,' .date('m/d/y') ;
 $body = '
 First name: '.$first_name.' '.PHP_EOL.'

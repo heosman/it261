@@ -20,7 +20,7 @@
                 <li><a href="website/daily.php">Switch (3)</a></li>
                 <li><a href="adder.php">Troubleshooting (4)</a></li>
                 <li><a href="calculator.php">Calculator (5)</a></li>
-                <li><a href="">Email (6)</a></li>
+                <li><a href="website/contact.php">Email (6)</a></li>
                 <li><a href="">Gallery (7)</a></li>
                 <li><a href="">Database (8)</a></li>
             </ul>
@@ -80,6 +80,12 @@
                 <li><a href="weeks/week6/functions.php">functions.php</a></li>
                 <li><a href="weeks/week6/implode.php">implode.php</a></li>
             </ul>   
+        <h3>Week 7</h3>
+            <ul>
+                <li><a href="weeks/week7/random.php">random.php</a></li>
+                <li><a href="weeks/week7/strings.php">strings.php</a></li>
+                <li><a href="weeks/week7/pictures.php">pictures.php</a></li>
+            </ul> 
     </aside>
 
     <footer>

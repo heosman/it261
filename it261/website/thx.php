@@ -4,10 +4,9 @@ include('includes/header.php'); ?>
 
     <div id="wrapper">
     <main>
-    <h1><?php echo $headline; ?></h1><br>
+    <h1 class="thanks"><?php echo $headline; ?></h1><br>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, turpis et vulputate placerat, augue purus rhoncus elit, ut ultricies nunc arcu in augue. </p><br>
-    <h2>Please fill out our form!</h2><br>
-    <?php include('includes/form.php'); ?>
+    <h2></h2><br>
     </main>
     <aside>
        <h3>Our aside for our form!</h3><br>
