@@ -1,11 +1,17 @@
 <?php
 
+ob_start();  // prevents header errors before reading the whole page!
+define('DEBUG', 'TRUE');  // We want to see our errors
+
+include('credentials.php');
+
+
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
 $nav['index.php'] = 'Home';
 $nav['about.php'] = 'About';
 $nav['daily.php'] = 'Daily';
-$nav['projects.php'] = 'Projects';
+$nav['cats.php'] = 'Cats';
 $nav['contact.php'] = 'Contact';
 $nav['gallery.php'] = 'Gallery';
 
@@ -42,8 +48,8 @@ switch(THIS_PAGE) {
         $headline = "Welcome to my Daily page!";
     break;
 
-    case 'projects.php':
-        $title = 'Projects page';
+    case 'cats.php':
+        $title = 'Cats <3';
         $body = 'projects inner';
         $headline = "Welcome to my Projects page!";
     break;
@@ -346,3 +352,22 @@ function random_pics($photos) {
     $selected_image = ''.$photos[$i].'.jpg';
     echo '<img src="images/'.$selected_image.'" alt="'.$photos[$i].'" class="random-image">';
 }
+
+
+// project
+
+function myError($myFile, $myLine, $errorMsg)
+{
+if(defined('DEBUG') && DEBUG)
+{
+ echo 'Error in file: <b> '.$myFile.' </b> on line: <b> '.$myLine.' </b>';
+      echo 'Error message: <b> '.$errorMsg.'</b>';
+      die();
+  }  else {
+      echo ' Houston, we have a problem!';
+      die();
+  }
+    
+    
+}
+

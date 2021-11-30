@@ -1,17 +1,29 @@
 <?php 
 include('config.php');
-include('includes/header.php'); ?>
+include('includes/header.php'); 
+
+$dessert['Eclair_Cake'] = 'pic1_No-Bake Eclair Cake is a dessert that has layers of graham crackers, vanilla pudding, whipped topping and topped with chocolate frosting.';
+$dessert['Tiramisu'] = 'pic2_Tiramisu is a coffee-flavored Italian dessert. It is made of ladyfingers dipped in coffee, layered with a whipped mixture of eggs, sugar, and mascarpone cheese, flavored with cocoa.';
+$dessert['Brownies'] = 'pic3_A chocolate brownie or simply a brownie is a square or rectangular chocolate baked confection.';
+$dessert['Chocolate_Chip_Cookies'] = 'pic4_A chocolate chip cookie is a drop cookie that features chocolate chips or chocolate morsels as its distinguishing ingredient.';
+$dessert['Cake'] = 'pic5_Cake is a form of sweet food made from flour, sugar, and other ingredients, that is usually baked.';
+
+?>
 
     <div id="wrapper">
     <div id="hero">
     </div>
-    <main>
+    <main id="gallery">
     <h1><?php echo $headline; ?></h1><br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lobortis, turpis et vulputate placerat, augue purus rhoncus elit, ut ultricies nunc arcu in augue. Integer condimentum velit et blandit ultrices. Praesent venenatis nec tellus eget finibus. Ut convallis dolor nec massa porttitor facilisis. Phasellus auctor est elit, eget auctor nunc faucibus ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer consectetur magna ut erat lacinia consequat. Etiam ut ante ac metus aliquet condimentum condimentum sed ex. Sed vitae sagittis sem, et euismod erat. Fusce ultrices vitae ipsum in viverra. Duis quis neque pretium, viverra lacus sed, pulvinar nibh. Morbi nibh lectus, ornare eget arcu quis, volutpat placerat purus. Nullam ultricies justo ipsum, in accumsan metus sollicitudin nec. Nunc posuere sapien ac leo aliquet maximus. Maecenas eleifend finibus leo ut sollicitudin. Cras ac sollicitudin ligula.</p>
-    </main>
-    <aside>
-        
-    </aside>
+    <table>
+    <?php foreach($dessert as $name => $image) : ?>
+    <tr>
+    <td><img src="images/<?php echo substr($image, 0, 4); ?>.jpg" alt="<?php echo str_replace('_', ' ', $name); ?>" class="gallery"></td> <!-- image-->
+    <td><?php echo str_replace('_', ' ', $name); ?></td>  <!-- name-->
+    <td><?php echo substr($image, 5); ?></td>   <!--info-->
+    </tr>
+    <?php endforeach;  ?>
+</table>
 
 <?php 
 include('includes/footer.php'); ?>

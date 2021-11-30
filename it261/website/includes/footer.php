@@ -1,5 +1,5 @@
 <footer>
-        <ul>
+<ul>
             <li>Copyright &copy;
             <?php 
             $date_current = date('Y');
@@ -17,8 +17,6 @@
             <li><a href="https://validator.w3.org/check/referer" target="_blank">HTML Validation</a></li>
             <li><a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">CSS Validation</a></li>
         </ul>
-    </footer>
-
-    </div>
+</footer>
 </body>
 </html>
