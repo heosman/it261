@@ -1,0 +1,172 @@
+/* STYES FOR REGISTER AND LOGIN PAGES */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+html {
+    background: #f7efdf;
+}
+
+#logo {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#logo img {
+    width: 150px;
+    margin-top: 25px;
+}
+
+#wrapper {
+    /*width: 60%;*/
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+div {
+    text-align: center;
+}
+
+h1 {
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 26px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+h2 {
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    line-height: 1.35;
+    font-size: 17px;
+    color: #4F3B26;
+    text-align: center;
+    font-style: italic;
+}
+
+a {
+    color: #927351;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    color: #4F3B26;
+}
+
+hr {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #927351;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    color: #4F3B26;
+}
+
+form {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background: #f8f4ea;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 6px #e5d5c2;
+}
+
+form ul{
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+fieldset {
+    padding: 10px;
+    border: none;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 300px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 1px solid #927351;
+    font-size: 16px;
+}
+
+input[type=radio] {
+    margin-right: 5px;
+}
+
+input[type="text"] {
+    text-align: center;
+    padding: 3px;
+}
+
+input[type="email"] {
+    text-align: center;
+    padding: 3px;
+}
+
+input[type="password"] {
+    text-align: center;
+    padding: 3px;
+}
+
+select {
+    display: block;
+}
+
+button {
+    margin-left: 10px;
+    width: 300px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid #4F3B26;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #927351;
+    background-color: #927351;
+    color: white;
+}
+
+.error p {
+    display: block;
+    color: red;
+    font-size: 1em;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-style: italic;
+}
+

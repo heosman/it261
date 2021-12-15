@@ -1,0 +1,418 @@
+/* Styles for my portal in it261 */
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: calibri;
+}
+
+html {
+    background: #f7efdf;
+}
+
+/* HEADER/NAV STYLES */
+
+header {
+    overflow:hidden;
+    background: #EFDEBD;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+nav {
+    float: right;
+    height: 50px;
+    margin: 20px auto;
+}
+
+nav ul {
+    float: right;
+    padding: 10px;
+}
+
+nav li {
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+}
+
+.current {
+    color: #4F3B26;
+    background-color: #f5e5c7;
+    border-bottom: 3px solid #4F3B26;
+    border-radius: 12px;
+    padding: 7px;
+}
+
+a:hover {
+    color: #b69777;
+}
+
+#logo {
+    float: left;
+    width: 100px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+
+/* LOGGED IN STYLES */
+
+.success {
+    margin-left: 20px;
+    margin-top: 20px;
+    float: left;
+    padding: 10px;
+    border: 2px solid #EFDEBD;
+    border-radius: 16px;
+}
+
+.welcome-logout {
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #EFDEBD;
+    border-radius: 12px;
+}
+
+.welcome-logout div{
+    text-align: center;
+    font-family: 'Itim', cursive;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 3px;
+    text-decoration: none;
+    background-color: #927351;
+    border-radius: 6px;
+    font-family: 'Itim', cursive;
+    color: #f7efdf;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: rgb(212, 52, 52);
+    color: white;
+}
+
+
+/* GENERAL STYLES */
+
+#wrapper {
+    /*width: 60%;*/
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+#hero {
+    padding-left: 30px;
+}
+
+main {
+    width: 60%;
+    float: left;
+    margin-bottom: 200px;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+main a {
+    color: #927351;
+}
+
+main hr {
+    border-top: 1px solid #927351;
+    margin-bottom: 10px;
+}
+
+main ul {
+    margin-bottom: 10px;
+}
+
+aside {
+    width: 38%;
+    float: right;
+    border-radius: 14px;
+    padding: 30px 20px 20px 20px;
+    margin-left: 10px;
+    margin-bottom: 200px;
+}
+
+aside ul {
+    padding: 10px;
+}
+
+aside li {
+    padding: 4px;
+    list-style-type: none;
+}
+
+aside a {
+    text-decoration: none;
+    color: #4F3B26;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+aside ul li {
+    border: 0.5px;
+    border-style: hidden hidden dashed hidden;
+}
+
+.daily-aside {
+    width: 28%;
+    margin-top: 50px;
+    border: 1px solid black;
+    background-color: #EFDEBD;
+}
+
+.aside-image {
+    width: 350px;
+    border-radius: 16px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #4F3B26;
+    font-family: 'Itim', cursive;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.35;
+    font-size: 17px;
+    color: #4F3B26;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    color: #4F3B26;
+}
+
+.thanks {
+    font-family: calibri;
+    font-style: italic;
+}
+
+.bottom {
+    margin-bottom: 300px;
+}
+
+.card {
+    display: inline-block;
+    width: 46%;
+    margin-top: 50px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 3px solid #927351;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #927351;
+    border-radius: 14px;
+    font-family: 'Itim', cursive;
+    color: #f7efdf;
+}
+
+.card .button:hover {
+    background-color: #b69777;
+}
+
+.image {
+    height: 300px;
+    border-radius: 16px;
+}
+
+#drinkpic {
+    width: 300px;
+    border-radius: 18px;
+}
+
+.ss img {
+    margin-top: 10px;
+    width: 120%;
+    margin-bottom: 20px;
+}
+
+.blurb {
+    font-style: italic;
+    font-size: .9em;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.top {
+    margin-top: 50px;
+}
+
+/* FORM STYLES */
+
+label {
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    color: #4F3B26;
+}
+
+form {
+    width: 550px;
+    margin-bottom: 20px;
+    background: #f8f4ea;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 6px #e5d5c2;
+}
+
+fieldset {
+    padding: 10px;
+    border: none;
+}
+
+input {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: 1px solid #927351;
+    font-size: 16px;
+}
+
+input[type=radio] {
+    margin-right: 5px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 5px;
+}
+
+form ul{
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+form li {
+    color: #4F3B26;
+}
+
+select {
+    display: block;
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid #927351;
+    font-size: 16px;
+    padding: 5px;
+}
+
+textarea {
+    margin-left: 10px;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid #927351;
+    font-size: 16px;
+    padding: 5px;
+}
+
+form a {
+    margin-left: 10px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+input[type="submit"], button {
+    width: 75px;
+    height: 30px;
+    padding: 3px;
+    border-radius: 6px;
+    border: 1px solid #4F3B26;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    border: 1px solid #927351;
+    background-color: #927351;
+    color: white;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: 1em;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* FOOTER STYLES */
+
+footer {
+    height: 50px;
+    line-height: 50px;
+    clear: both;
+}
+
+footer ul {
+    margin: 0 auto;
+    width: 785px;
+}
+
+footer li {
+    float:left;
+    list-style-type: none;
+    margin-left: 20px;
+    color: #4F3B26;
+}
+
+footer a {
+    color: #927351;
+}
