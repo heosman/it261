@@ -14,23 +14,23 @@ $password_1 = mysqli_real_escape_string($iConn, $_POST['password_1']);
 $password_2 = mysqli_real_escape_string($iConn, $_POST['password_2']);
 
 if(empty($name)) {
-    array_push($errors, '<p>Name is required!</p>');
+    array_push($errors, 'Name is required!');
 }
 
 if(empty($email)) {
-    array_push($errors, '<p>Email is required!</p>');
+    array_push($errors, 'Email is required!');
 }
 
 if(empty($username)) {
-    array_push($errors, '<p>Username is required!</p>');
+    array_push($errors, 'Username is required!');
 }
 
 if(empty($password_1)) {
-    array_push($errors, '<p>Password is required!</p>');
+    array_push($errors, 'Password is required!');
 }
 
 if($password_1 !== $password_2) {
-    array_push($errors, '<p>Passwords do not match!</p>');
+    array_push($errors, 'Passwords do not match!');
 }
 
 
@@ -43,18 +43,18 @@ $rows = mysqli_fetch_assoc($result);
 if($rows) {
 
     if($rows['username'] == $username) {
-        array_push($errors, '<p>Username already exists!</p>');
+        array_push($errors, 'Username already exists!');
     }
 
     if($rows['email'] == $email) {
-        array_push($errors, '<p>Email already exists!</p>');
+        array_push($errors, 'Email already exists!');
     }
 } // closed rows
 
 if(count($errors) < 1) {
     $password = md5($password_1);
 
-    $query = "INSERT INTO ts_users (first_name, last_name, email, username, password) VALUES ('$name', '$email', '$username', '$password')";
+    $query = "INSERT INTO ts_users (name, email, username, password) VALUES ('$name', '$email', '$username', '$password')";
 
 mysqli_query($iConn, $query);
 
@@ -74,11 +74,11 @@ $username = mysqli_real_escape_string($iConn, $_POST['username']);
 $password = mysqli_real_escape_string($iConn, $_POST['password']);
 
 if(empty($username)) {
-    array_push($errors, '<p>Username is required!</p>');
+    array_push($errors, 'Username is required!');
 }
 
 if(empty($password)) {
-    array_push($errors, '<p>Password is required!</p>');
+    array_push($errors, 'Password is required!');
 }
 
 if(count($errors) == 0) {
@@ -95,7 +95,7 @@ if(count($errors) == 0) {
 
         header('Location:index.php');
     } else {
-        array_push($errors, '<p>Wrong username/password combination!</p>');
+        array_push($errors, 'Wrong username/password combination!');
     }
 
 } // end if count
